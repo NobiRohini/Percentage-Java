@@ -1,0 +1,81 @@
+import java.io.*;
+
+import java.util.*;
+
+import java.text.*;
+
+import java.math.*;
+
+import java.util.regex.*;
+
+
+
+abstract class Marks{
+
+    abstract void getPercentage();
+
+}
+
+class A extends Marks{
+
+    double x,y,z;
+
+    A(double a,double b,double c){
+
+        x=a;
+
+        y=b;
+
+        z=c;
+
+    }
+
+    void getPercentage(){
+
+        System.out.println((x+y+z)/3);
+
+    }
+
+}
+
+class B extends Marks{
+
+    double p,q,r,s;
+
+    B(double a,double b,double c,double d){
+
+        p=a;
+
+        q=b;
+
+        r=c;
+
+        s=d;
+
+    }
+
+    void getPercentage(){
+
+        System.out.println((p+q+r+s)/4);
+
+    }
+
+}
+
+public class Solution{
+
+    public static void main(String args[]){
+
+        Scanner s=new Scanner(System.in);
+
+        A x=new A(s.nextDouble(),s.nextDouble(),s.nextDouble());
+
+        B y=new B(s.nextDouble(),s.nextDouble(),s.nextDouble(),s.nextDouble());
+
+        x.getPercentage();
+
+        y.getPercentage();
+
+    }
+
+}
